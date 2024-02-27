@@ -26,11 +26,11 @@ After this run command:
 
 _**sh ./first_start.sh**_
 
-    This script will install and setup all needed environment: php, nginx, MySQl, PhpMyAdmin and Xdebug
+This script will install and setup all needed environment: php, nginx, MySQl, PhpMyAdmin and Xdebug
 
   **NOTE**: The script will ask about user's password because it run sudo for some command.
 
-        Command will generate the application key.
+Command will generate the application key.
 
 3. To check the result go to URL: localhost:5000
 
