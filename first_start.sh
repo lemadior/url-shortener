@@ -21,20 +21,7 @@ if [ ! -z "$php_container_running" ]; then
     else
         echo 'Ok';
     fi
-
-    # echo -n "Prepare AdminLTE..."
-    # /usr/bin/docker exec -it app php artisan adminlte:install --only=config>/dev/null;
-
-    # if [ $? -ne 0 ] ; then
-    #     echo "Some error occured!"
-    #     exit 1
-    # else
-    #     echo 'Ok';
-    # fi
 fi
-
-#echo "Create .env file"
-#/usr/bin/cp ./.env.example ./.env || exit 1
 
 echo "Generate application key"
 /usr/bin/docker exec -it app php artisan key:generate --ansi || exit 1
@@ -42,7 +29,7 @@ echo "Generate application key"
 echo "done."
 
 echo "NOTE: don't forget to add username and password to the '.env' file"
-echo "      after this do command 'docker exec -it app php artisan migrate'"
+echo "      after this do command 'docker exec -it app php artisan migrate --seed'"
 echo
 
 exit 0
