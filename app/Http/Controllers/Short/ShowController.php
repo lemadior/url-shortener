@@ -4,12 +4,12 @@ namespace App\Http\Controllers\Short;
 
 use App\Http\Controllers\Controller;
 use App\Models\Short\Link;
-use Illuminate\Http\Request;
+use Illuminate\View\Factory;
+use Illuminate\View\View;
 
 class ShowController extends Controller
 {
-
-    public function list()
+    public function list(): Factory|View
     {
         $perPage = env('PAGINATE_PER_PAGE', 5);
 

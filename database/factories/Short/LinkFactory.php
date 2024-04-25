@@ -16,14 +16,15 @@ class LinkFactory extends Factory
      */
     public function definition(): array
     {
-        $shortlinks = [
+        $shortLinks = [
             'df', 'Mj', 'Zd', 'Y7', 'Mo', 'Ab', 'Oi', 'Km', 'F8', 'Uu',
             'Lk', 'H6', '1d', 'Wq', 'Sz', 'm4', 'Io', 'R6', 'Tr', 'Pd',
             'Ss', 'Fd', 'Hg', 'L0', '7f', 'cv', 'bR', 'kq', 'Zt', 'dd'
         ];
+
         return [
             'name' => fake()->word(),
-            'shortlink' => fake()->unique()->randomElement($shortlinks),
+            'shortlink' => fake()->unique()->randomElement($shortLinks),
             'url' => fake()->unique()->url(),
             'counter' => fake()->randomNumber(2, true)
         ];

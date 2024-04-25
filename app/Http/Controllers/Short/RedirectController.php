@@ -19,11 +19,6 @@ class RedirectController extends Controller
 
         $link->update(['counter' => $counter]);
 
-        if (!$link) {
-            return redirect()->back()->with('error', 'Something wrong with URL');
-        }
-
-        return Redirect::away($link->url);
-
+        return $link ? Redirect::away($link->url) : redirect()->back()->with('error', 'Something wrong with URL');
     }
 }

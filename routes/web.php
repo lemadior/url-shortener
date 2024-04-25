@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::fallback(function() {
+Route::fallback(function () {
     return response()->view('main.404', [], 404);
 });
 
-Route::namespace('App\Http\Controllers\Short')->group(function() {
+Route::namespace('App\Http\Controllers\Short')->group(function () {
     Route::get('/', IndexController::class)->name('home');
     Route::get('/shorten', [ShortenController::class, 'index'])->name('shorten');
     Route::post('/alias', [CreateController::class, 'index'])->name('create.alias');

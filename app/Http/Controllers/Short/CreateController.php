@@ -20,16 +20,16 @@ class CreateController extends Controller
 
         $randomChars = new SymbolGeneration($shortLinkLength);
 
-        // Get all existent aliases and turn it into arrray. Only Aliases!
+        // Get all existent aliases and turn it into array. Only Aliases!
         $existentLinks = Link::all()->pluck('shortlink')->toArray();
 
         $shortLink = '';
 
         // Get unique chars sequence
         while (!$shortLink) {
-            $str= $randomChars->getShortLink();
+            $str = $randomChars->getShortLink();
 
-            if (in_array($str, $existentLinks)) {
+            if (in_array($str, $existentLinks, true)) {
                 continue;
             }
 

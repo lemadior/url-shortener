@@ -13,8 +13,7 @@
 
                 <p>Original URL to the site: <span class="text-primary">{{ $link->url }}</span></p>
 
-
-                <a href="{{route('redirect.original', $link->shortlink) }}" class="col-3 btn btn-primary mt-3">Go to Link</a>
+                <a href="{{ route('redirect.original', $link->shortlink) }}" class="col-3 btn btn-primary mt-3">Go to Link</a>
             </div>
         </div>
     </section>

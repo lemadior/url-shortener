@@ -10,8 +10,6 @@
         <div class="container ">
 
             <div class="col-8 intro">
-
-
                 <p>
                     A URL shortening service is an online platform designed to create concise and easily
                     shareable versions of longer website addresses. Users input a lengthy URL, and the
@@ -26,8 +24,6 @@
                     rates and engagement.
                 </p>
             </div>
-
-
 
         </div>
     </section>

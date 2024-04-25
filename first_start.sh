@@ -16,7 +16,7 @@ if [ ! -z "$php_container_running" ]; then
     /usr/bin/docker exec -it app composer install >/dev/null;
 
     if [ $? -ne 0 ] ; then
-        echo "Some error occured!"
+        echo "Some error occurred!"
         exit 1
     else
         echo 'Ok';
