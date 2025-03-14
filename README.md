@@ -18,11 +18,12 @@ variable _**SHORTENED_LINK_LENGTH**_ in the .env file.
     It's really important to copy .env.example to the .env ! Without it nothing will works!
 
     After .env being created one must set the database variable:
+
         - DB_USERNAME=<some username>
         
         - DB_PASSWORD=<some password>
 
-       - DB_ROOT_PASSWORD=root (only for testing. Without it DB will not works)
+        - DB_ROOT_PASSWORD=root (only for testing. Without it DB will not works)
 
 After this run command:
 
